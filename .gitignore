@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# vs2022
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+
+.vs/
