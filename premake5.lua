@@ -9,6 +9,9 @@ project "BasicPhysicsSimulation"
     targetdir "bin/%{cfg.buildcfg}"
 
     files { "**.h", "**.cpp" }
+	
+	libdirs { "vendor/lib" }
+	includedirs { "vendor/include" }
 
     filter "configurations:Debug"
         defines { "DEBUG" }
