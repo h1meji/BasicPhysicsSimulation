@@ -16,10 +16,22 @@ project "BasicPhysicsSimulation"
     filter "configurations:Debug"
         defines { "DEBUG" }
         symbols "On"
+		
+		links {
+			"sfml-graphics-d",
+			"sfml-window-d",
+			"sfml-system-d"
+		}
 
     filter "configurations:Release"
         defines { "NDEBUG" }
         optimize "On"
+		
+		links {
+			"sfml-graphics",
+			"sfml-window",
+			"sfml-system"
+		}
 		
 	filter "platforms:x64"
             architecture "x86_64"
