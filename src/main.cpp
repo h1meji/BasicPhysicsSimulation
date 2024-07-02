@@ -7,8 +7,11 @@ int main()
 
     window.setFramerateLimit(60);
 
+    sf::Clock clock;
+
     while (window.isOpen())
     {
+        sf::Time elapsed = clock.restart();
         sf::Event event;
 
         while (window.pollEvent(event))
