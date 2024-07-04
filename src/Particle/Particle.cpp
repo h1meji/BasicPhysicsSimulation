@@ -8,6 +8,24 @@ float Particle::calculateMass() const
 	return m_radius;
 }
 
+void Particle::update(float deltaTime)
+{
+	m_velocity += m_acceleration * deltaTime;
+	m_position += m_velocity * deltaTime;
+	m_acceleration = sf::Vector2f(0, 0);
+}
+
+void Particle::applyForce(const sf::Vector2f& force)
+{
+	m_acceleration += force / m_mass;
+}
+
+void Particle::draw(sf::RenderWindow window)
+{
+	sf::CircleShape particle(50.f);
+	window.draw(particle);
+}
+
 sf::Vector2f Particle::getPosition() const
 {
 	return m_position;
@@ -26,22 +44,4 @@ sf::Vector2f Particle::getAcceleration() const
 float Particle::getMass() const
 {
 	return m_mass;
-}
-
-void Particle::update(float deltaTime)
-{
-	m_velocity += m_acceleration * deltaTime;
-	m_position += m_velocity * deltaTime;
-	m_acceleration = sf::Vector2f(0, 0);
-}
-
-void Particle::applyForce(const sf::Vector2f& force)
-{
-	m_acceleration += force / m_mass;
-}
-
-void Particle::draw(sf::RenderWindow window)
-{
-	sf::CircleShape particle(50.f);
-	window.draw(particle);
 }
