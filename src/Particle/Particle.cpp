@@ -39,3 +39,9 @@ void Particle::applyForce(const sf::Vector2f& force)
 {
 	m_acceleration += force / m_mass;
 }
+
+void Particle::draw(sf::RenderWindow window)
+{
+	sf::CircleShape particle(50.f);
+	window.draw(particle);
+}

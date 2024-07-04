@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
+#include <SFML/Window.hpp>
 
 class Particle
 {
@@ -9,6 +10,7 @@ public:
 
 	void update(float deltaTime);
 	void applyForce(const sf::Vector2f& force);
+	void draw(sf::RenderWindow window);
 
 	// get func s
 	sf::Vector2f getPosition() const;
