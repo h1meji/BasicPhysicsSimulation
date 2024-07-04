@@ -17,6 +17,7 @@ public:
 	sf::Vector2f getVelocity() const;
 	sf::Vector2f getAcceleration() const;
 	float getMass() const;
+	float getRadius() const;
 
 private:
 	sf::Vector2f m_position;

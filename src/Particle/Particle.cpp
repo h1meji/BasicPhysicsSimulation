@@ -45,3 +45,8 @@ float Particle::getMass() const
 {
 	return m_mass;
 }
+
+float Particle::getRadius() const
+{
+	return m_radius;
+}
