@@ -11,17 +11,17 @@ public:
 	void applyForce(const sf::Vector2f& force);
 
 	// get func s
-	sf::Vector2f getPosition();
-	sf::Vector2f getVelocity();
-	sf::Vector2f getAcceleration();
-	float getMass();
+	sf::Vector2f getPosition() const;
+	sf::Vector2f getVelocity() const;
+	sf::Vector2f getAcceleration() const;
+	float getMass() const;
 
 private:
-	sf::Vector2f position;
-	sf::Vector2f velocity;
-	sf::Vector2f acceleration;
-	float mass;
-	float radius;
+	sf::Vector2f m_position;
+	sf::Vector2f m_velocity;
+	sf::Vector2f m_acceleration;
+	float m_mass;
+	float m_radius;
 
-	float calculateMass(float g = 9.81f);
+	float calculateMass() const;
 };
