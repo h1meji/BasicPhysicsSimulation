@@ -21,6 +21,9 @@ public:
 	float getMass() const;
 	float getRadius() const;
 
+	// set func s
+	void setVelocity(sf::Vector2f velocity);
+
 private:
 	sf::Vector2f m_position;
 	sf::Vector2f m_velocity;

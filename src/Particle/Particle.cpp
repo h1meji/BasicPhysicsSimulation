@@ -65,3 +65,8 @@ float Particle::getRadius() const
 {
 	return m_radius;
 }
+
+void Particle::setVelocity(sf::Vector2f velocity)
+{
+	m_velocity = velocity;
+}
