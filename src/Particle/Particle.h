@@ -13,7 +13,7 @@ public:
 	void draw(sf::RenderWindow window);
 
 	bool isCollidingWithParticle(const Particle& p) const;
-	bool isCollidingWithWall(sf::RenderWindow window) const;
+	bool isCollidingWithWall(sf::Vector2u windowSize) const;
 
 	// get func s
 	sf::Vector2f getPosition() const;

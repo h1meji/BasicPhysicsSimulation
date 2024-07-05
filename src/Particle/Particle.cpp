@@ -36,11 +36,11 @@ bool Particle::isCollidingWithParticle(const Particle& p) const
 	return distance < (m_radius / 2 + p.getRadius() / 2);
 }
 
-bool Particle::isCollidingWithWall(sf::RenderWindow window) const
+bool Particle::isCollidingWithWall(sf::Vector2u windowSize) const
 {
 	bool outsideN = m_position.y - m_radius < 0;
-	bool outsideE = m_position.x + m_radius > window.getSize().x;
-	bool outsideS = m_position.y + m_radius > window.getSize().y;
+	bool outsideE = m_position.x + m_radius > windowSize.x;
+	bool outsideS = m_position.y + m_radius > windowSize.y;
 	bool outsideW = m_position.x - m_radius < 0;
 
 	return outsideN || outsideE || outsideS || outsideW;
