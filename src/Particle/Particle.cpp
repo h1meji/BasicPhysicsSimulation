@@ -12,6 +12,13 @@ float Particle::calculateMass() const
 
 void Particle::update(float deltaTime)
 {
+	// gravity
+	applyForce(sf::Vector2f(0, 98.1f));
+
+	// drag
+	sf::Vector2f dragForce = -0.2f * m_velocity;
+	applyForce(dragForce);
+
 	m_velocity += m_acceleration * deltaTime;
 	m_position += m_velocity * deltaTime;
 	m_acceleration = sf::Vector2f(0, 0);
