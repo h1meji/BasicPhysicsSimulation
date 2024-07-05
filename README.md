@@ -14,8 +14,6 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](url)
-
 ## Key Features
 
 - Collision
