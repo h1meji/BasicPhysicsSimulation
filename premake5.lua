@@ -11,7 +11,7 @@ project "BasicPhysicsSimulation"
     files { "**.h", "**.cpp" }
 	
 	libdirs { "vendor/lib" }
-	includedirs { "vendor/include" }
+	includedirs { "vendor/include", "src" }
 
     filter "configurations:Debug"
         defines { "DEBUG" }
