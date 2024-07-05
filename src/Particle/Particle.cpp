@@ -1,5 +1,7 @@
 #include "Particle.h"
 
+#include <cmath>
+
 Particle::Particle(float radius, float x, float y) : m_radius(radius), m_position(x, y), m_acceleration(0, 0), m_velocity(0, 0), m_mass(calculateMass())
 { }
 
@@ -26,6 +28,25 @@ void Particle::draw(sf::RenderWindow window)
 	window.draw(particle);
 }
 
+bool Particle::isCollidingWithParticle(const Particle& p) const
+{
+	sf::Vector2f distanceVector = m_position - p.getPosition();
+	float distance = sqrtf(powf(fabsf(distanceVector.x), 2) + powf(fabsf(distanceVector.y), 2)); // a^2 + b^2 = c^2
+
+	return distance < (m_radius / 2 + p.getRadius() / 2);
+}
+
+bool Particle::isCollidingWithWall(sf::RenderWindow window) const
+{
+	bool outsideN = m_position.y - m_radius < 0;
+	bool outsideE = m_position.x + m_radius > window.getSize().x;
+	bool outsideS = m_position.y + m_radius > window.getSize().y;
+	bool outsideW = m_position.x - m_radius < 0;
+
+	return outsideN || outsideE || outsideS || outsideW;
+}
+
+// get func s
 sf::Vector2f Particle::getPosition() const
 {
 	return m_position;

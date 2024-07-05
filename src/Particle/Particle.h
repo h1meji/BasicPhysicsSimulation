@@ -12,6 +12,9 @@ public:
 	void applyForce(const sf::Vector2f& force);
 	void draw(sf::RenderWindow window);
 
+	bool isCollidingWithParticle(const Particle& p) const;
+	bool isCollidingWithWall(sf::RenderWindow window) const;
+
 	// get func s
 	sf::Vector2f getPosition() const;
 	sf::Vector2f getVelocity() const;
