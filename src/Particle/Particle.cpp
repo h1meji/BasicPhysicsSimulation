@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-Particle::Particle(float radius, float x, float y) : m_radius(radius), m_position(x, y), m_acceleration(0, 0), m_velocity(0, 0), m_mass(calculateMass())
+Particle::Particle(float radius, float x, float y) : m_radius(radius), m_position(x, y), m_acceleration(0, 0), m_velocity(0, 0), m_mass(calculateMass()), m_color(rand() % 256, rand() % 256, rand() % 256)
 { }
 
 float Particle::calculateMass() const

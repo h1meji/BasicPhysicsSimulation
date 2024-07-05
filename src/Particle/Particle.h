@@ -31,5 +31,7 @@ private:
 	float m_mass;
 	float m_radius;
 
+	sf::Color m_color;
+
 	float calculateMass() const;
 };
