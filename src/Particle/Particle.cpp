@@ -66,6 +66,16 @@ float Particle::getRadius() const
 	return m_radius;
 }
 
+sf::CircleShape Particle::getDrawable() const
+{
+	sf::CircleShape shape(m_radius);
+
+	shape.setPosition(m_position.x, m_position.y);
+	shape.setFillColor(m_color);
+
+	return shape;
+}
+
 void Particle::setVelocity(sf::Vector2f velocity)
 {
 	m_velocity = velocity;

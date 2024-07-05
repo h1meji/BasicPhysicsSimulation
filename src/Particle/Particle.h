@@ -20,6 +20,7 @@ public:
 	sf::Vector2f getAcceleration() const;
 	float getMass() const;
 	float getRadius() const;
+	sf::CircleShape getDrawable() const;
 
 	// set func s
 	void setVelocity(sf::Vector2f velocity);
