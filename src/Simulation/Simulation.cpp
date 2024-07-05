@@ -17,8 +17,8 @@ Simulation::Simulation(sf::Vector2u windowSize, int particlesCount, bool randomS
 	for (size_t i = 0; i < particlesCount; i++)
 	{
 		float size = randomSizes ? static_cast<float>(rand() % 10) + 10 : 10;
-		float x = randomPositions ? static_cast<float>(rand() % m_windowSize.x) : 0;
-		float y = randomPositions ? static_cast<float>(rand() % m_windowSize.y) : 0;
+		float x = randomPositions ? static_cast<float>(rand() % m_windowSize.x - 100) + 50 : 50;
+		float y = randomPositions ? static_cast<float>(rand() % m_windowSize.y - 100) + 50 : 50;
 
 		m_particles.push_back(Particle(size, x, y));
 	}
