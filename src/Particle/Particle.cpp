@@ -34,7 +34,7 @@ bool Particle::isCollidingWithParticle(const Particle& p) const
 	sf::Vector2f distanceVector = m_position - p.getPosition();
 	float distance = sqrtf(powf(fabsf(distanceVector.x), 2) + powf(fabsf(distanceVector.y), 2)); // a^2 + b^2 = c^2
 
-	return distance < (m_radius / 2 + p.getRadius() / 2);
+	return distance < (m_radius + p.getRadius());
 }
 
 bool Particle::isCollidingWithWall(sf::Vector2u windowSize) const

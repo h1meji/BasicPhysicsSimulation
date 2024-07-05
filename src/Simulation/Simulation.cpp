@@ -67,13 +67,13 @@ void Simulation::resolveCollision(Particle& p1, Particle& p2) const
 void Simulation::resolveCollisionWithWall(Particle& p, sf::Vector2u windowSize) const
 {
 	sf::Vector2f v = p.getVelocity();
-	if (p.getPosition().x + p.getRadius() / 2 <= 0 || p.getPosition().x + p.getRadius() / 2 >= windowSize.x)
+	if (p.getPosition().x + p.getRadius() <= 0 || p.getPosition().x + p.getRadius() >= windowSize.x)
 	{
 		v.x *= -1;
 		p.setVelocity(v);
 	}
 
-	if (p.getPosition().y + p.getRadius() / 2 <= 0 || p.getPosition().y + p.getRadius() / 2 >= windowSize.y)
+	if (p.getPosition().y + p.getRadius() <= 0 || p.getPosition().y + p.getRadius() >= windowSize.y)
 	{
 		v.y *= -1;
 		p.setVelocity(v);
