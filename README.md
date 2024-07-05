@@ -27,7 +27,7 @@ Just run the executable file, and a window will open with the simulation.
 
 ## Download
 
-[Here](https://github.com/h1meji/BasicPhysicsSimulation/releases/tag/latest) you can download the latest for Windows.
+[Here](https://github.com/h1meji/BasicPhysicsSimulation/releases/) you can download the latest release for Windows.
 
 ## Credits
 
