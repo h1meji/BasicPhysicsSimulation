@@ -10,7 +10,6 @@ public:
 
 	void update(float deltaTime);
 	void applyForce(const sf::Vector2f& force);
-	void draw(sf::RenderWindow window);
 
 	bool isCollidingWithParticle(const Particle& p) const;
 	bool isCollidingWithWall(sf::Vector2u windowSize) const;
