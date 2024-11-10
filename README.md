@@ -23,7 +23,7 @@
 
 Just run the executable file, and a window will open with the simulation.
 
-> [NOTE]:
+> [!NOTE]
 > I will not update this project anymore, so feel free to fork it and make your own changes.
 
 ## Download
